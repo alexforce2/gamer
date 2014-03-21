@@ -1,5 +1,6 @@
 .idea
 files
+storage
 application/core/config/config.php
 modules_sty
 index.php
