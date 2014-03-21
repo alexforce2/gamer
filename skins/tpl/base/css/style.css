@@ -1,0 +1,86 @@
+.b-validation .tooltip {
+    display: block;
+    visibility: hidden;
+    z-index: 10;
+    padding: 5px;
+    line-height: 25px;
+
+    position: absolute;
+    color: #111;
+    border: 1px solid #DCA;
+    background: #FEFFD6;
+
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-box-shadow: 5px 5px 8px #CCC;
+    -webkit-box-shadow: 5px 5px 8px #CCC;
+
+    width: 200px;
+    z-index: 99;
+    color: #FFFFFF;
+    min-height: 25px;
+    min-width: 200px;
+}
+
+.b-validation .error {
+    visibility: visible;
+}
+
+.b-validation .tooltip {
+    position: relative;
+    background: #1ABC9C;
+    border: 4px solid #2C3E50;
+}
+
+.b-validation .tooltip:after, .b-validation .tooltip:before {
+    right: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.b-validation .tooltip:after {
+    border-color: rgba(26, 188, 156, 0);
+    border-right-color: #1ABC9C;
+    border-width: 10px;
+    margin-top: -10px;
+}
+
+.b-validation .tooltip:before {
+    border-color: rgba(44, 62, 80, 0);
+    border-right-color: #2C3E50;
+    border-width: 16px;
+    margin-top: -16px;
+}
+
+span.customSelect {
+    font: 12px sans-serif;
+    background: #fff url(/skins/img/interface/2u7rpec.png) right center no-repeat;
+    border: 1px solid #ddd;
+    color: #555;
+    padding: 7px 9px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px 2px;
+}
+
+.input-txt-profile {
+    width: 256px;
+}
+
+span.customSelect.changed {
+    background-color: #f0dea4;
+}
+
+.modal-gamer-data-td {
+    width: 150px;
+}
+
+.modal-gamer-data-table select {
+    width: 200px;
+}

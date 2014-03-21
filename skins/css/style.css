@@ -1,0 +1,310 @@
+html{overflow-y: scroll;}
+body {
+    width: 960px;
+    margin: 0 auto;
+    color: #34495e;
+    font: 14px/1.231 "Lato", sans-serif;
+    line-height: 20px;
+
+}
+/* начало все основные стили */
+#header {padding: 15px 0 0px 0; min-height: 90px;}
+img{border: none;}
+.left{float: left;}
+.right{float: right;}
+.clear{clear: both;}
+.hide{display: none;}
+.valid-true{margin-left: 10px; background: url(/skins/img/interface/valid-true.png) center left no-repeat; height: 16px; width: 16px; display: inline-block; position: relative; top:2px;}
+.valid-false{margin-left: 10px; background: url(/skins/img/interface/valid-false.png) center left no-repeat; height: 16px; width: 16px; display: inline-block; position: relative; top:2px;}
+.br-points{height: 4px; margin-top: 10px; background:url(/skins/img/interface/point.png)}
+.br-points-s{height: 4px; margin-top: 10px; background:url(/skins/img/interface/point-s.png)}
+.error{font-weight: bold; color: red}
+/* конец все основные стили */
+
+/* начало иконки удаления изображений */
+.edit-image{position: relative;}
+#error-img{padding: 20px; float: right}
+#delete-images{background-image:url(/skins/img/interface/delete-image-hover.png); display: none; opacity: 0.6; width: 15px; height: 15px; position: absolute;  cursor: pointer;}
+/* конец иконки удаления изображений */
+
+
+/* начало автокомплит для поиска */
+.autocomplete-suggestions { border: 1px solid #999; background: #FFF; cursor: default; overflow: auto; -webkit-box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); -moz-box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); }
+.autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
+.autocomplete-selected { background: #F0F0F0; }
+.autocomplete-suggestions strong { font-weight: normal; color: #3399FF; }
+/* конец автокомплит для поиска */
+
+
+/* начало лайки для статей */
+.likes {cursor: pointer; font-weight: bold;}
+.like:hover {color: green;}
+.dislike:hover {color: red;}
+.liked {color: green; cursor: default;}
+.disliked {cursor: default; color: red;}
+/* конец лайки для статей */
+
+/* начало главное меню */
+ul,ol {padding: 0; margin: 0 0 10px 25px;}
+.main-div-menu {*zoom: 1;}
+.main-div-menu:before, .main-div-menu:after {display: table; line-height: 0; content: "";}
+.main-div-menu:after {clear: both;}
+
+.nav-bar {*position: relative; *z-index: 2; margin-bottom: 20px;overflow: visible; width: 760px; float: left;}
+.nav-container {margin-right: auto; margin-left: auto; *zoom: 1;}
+.nav-container:before, .nav-container:after {display: table; line-height: 0; content: "";}
+.nav-container:after {clear: both;}
+.nav {margin-bottom: 20px; margin-left: 0; list-style: none;}
+.nav > li > a {display: block;}
+
+.nav-bar .nav {position: relative; left: 0; display: block; float: left; margin: 0 10px 0 0;}
+.nav-bar .nav > li {float: left;}
+.nav-bar {font-size: 16px;}
+.nav-bar .nav > li:hover > ul {top: 100%; }
+.nav-bar .nav > li > ul {padding-top: 13px; top: 80%; background-color: white\9;}
+.nav-bar .nav > li > ul:before {content: ""; border-style: solid; border-width: 0 9px 9px 9px; border-color: transparent transparent #34495e transparent;
+    height: 0px; position: absolute; left: 15px; top: 5px; width: 0px; -webkit-transform: rotate(360deg);}
+.nav-bar .nav > li > ul li:hover ul {opacity: 1; -webkit-transform: scale(1, 1); visibility: visible; display: block\9; }
+.nav-bar .nav > li > ul li ul {left: 100%; }
+.nav-bar .nav > li > a {padding: 9px 30px 10px; text-decoration: none; }
+.nav-bar .nav > li > a:hover {color: #1abc9c; }
+.nav-bar .nav li {position: relative;}
+.nav-bar .nav li:hover > ul {opacity: 1; z-index: 100; -webkit-transform: scale(1, 1); visibility: visible; display: block\9; }
+.nav-bar .nav ul {border-radius: 4px; left: 15px; list-style-type: none; margin-left: 0; opacity: 0; position: absolute; top: 0; width: 234px; z-index: -100; }
+
+    /* начало выпадающее меню*/
+.nav-bar .nav ul ul {left: 95%;padding-left: 5px; }
+.nav-bar .nav ul li {background-color: #34495e; padding: 0 3px 3px; }
+.nav-bar .nav ul li:first-child {border-radius: 4px 4px 0 0; padding-top: 3px;}
+.nav-bar .nav ul li:last-child {border-radius: 0 0 4px 4px;}
+.nav-bar .nav ul a {border-radius: 2px; color: white; display: block; font-size: 14px; padding: 6px 9px; text-decoration: none; }
+.nav-bar .nav ul a:hover {background-color: #1abc9c;}
+    /* конец выпадающее меню*/
+.nav-bar-inner {border: none; padding-left: 4px; padding-right: 4px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px; filter: progid:DXImageTransform.Microsoft.gradient(enabled = false); }
+.nav-bar-inverse .nav-bar-inner {background: #34495e; filter: progid:DXImageTransform.Microsoft.gradient(enabled = false); }
+.nav-bar-inverse .nav > li > a {color: white; }
+
+    /* начало поле поиска */
+.search-menu {width: 180px; float: left; margin-left: 20px;  }
+.search-field {width: 76%; padding: 11px 30px 10px 10px !important; position: relative; bottom: 2px; background-image: url("/skins/img/interface/search-disabled.png"); background-repeat: no-repeat; background-position: right 9px bottom 10px;}
+.search-field:focus {width: 76%; padding: 11px 30px 10px 10px !important; position: relative; bottom: 2px; background-image: url("/skins/img/interface/search.png"); background-repeat: no-repeat; background-position: right 9px bottom 10px;}
+    /* конец поле поиска */
+
+/* конец главное меню */
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+    border: 2px solid #dce4ec;
+    color: #34495e;
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    padding: 10px 0 8px 10px;
+    text-indent: 1px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;}
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+    transition: border linear 0.2s, box-shadow linear 0.2s;}
+
+
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+    border-color: #1abc9c;
+    outline: 0;
+    outline: thin dotted \9;
+    -webkit-box-shadow: inset 0 1px 1px #1abc9c, 0 1px 1px #1abc9c;
+    -moz-box-shadow: inset 0 1px 1px #1abc9c, 0 1px 1px #1abc9c;
+    box-shadow: inset 0 0px 1px #1abc9c, 0 0px 1px #1abc9c;
+}
+
+.btn{background: #1abc9c; color: #ffffff; padding: 8px 25px; text-decoration: none; border-radius: 5px; -webkit-transition: 0.25s; -moz-transition: 0.25s; -o-transition: 0.25s; transition: 0.25s;}
+.btn:hover {background: #2fe2bf; color: #ffffff; text-decoration: none; border-radius: 5px; -webkit-transition: 0.25s; -moz-transition: 0.25s; -o-transition: 0.25s; transition: 0.25s;}
+
+/* начало форма логина */
+.form-login-input{height: 12px; font-size: 12px !important; width: 160px; margin-right: 10px;  }
+.btn-login{background: #1abc9c; color: #ffffff; padding: 8px 25px; text-decoration: none; border-radius: 5px; -webkit-transition: 0.25s; -moz-transition: 0.25s; -o-transition: 0.25s; transition: 0.25s;}
+.btn-login:hover {background: #2fe2bf; color: #ffffff; text-decoration: none; border-radius: 5px; -webkit-transition: 0.25s; -moz-transition: 0.25s; -o-transition: 0.25s; transition: 0.25s;}
+#remember-check{cursor: pointer;}
+#remember-check img{margin-bottom: -1px;}
+.form-login{margin-top: 15px;}
+#login-in{background-image: url("/skins/img/interface/login-in-disabled.png"); background-repeat: no-repeat; background-position: right 9px bottom 10px; -webkit-transition: 0.25s; -moz-transition: 0.25s; -o-transition: 0.25s; transition: 0.25s;}
+#login-in:focus{background-image: url("/skins/img/interface/login-in-enabled.png"); background-repeat: no-repeat; background-position: right 9px bottom 10px; -webkit-transition: 0.25s; -moz-transition: 0.25s; -o-transition: 0.25s; transition: 0.25s;}
+#pass-in{background-image: url("/skins/img/interface/pass-in-disabled.png"); background-repeat: no-repeat; background-position: right 9px bottom 10px; -webkit-transition: 0.25s; -moz-transition: 0.25s; -o-transition: 0.25s; transition: 0.25s;}
+#pass-in:focus{background-image: url("/skins/img/interface/pass-in-enabled.png"); background-repeat: no-repeat; background-position: right 9px bottom 10px; -webkit-transition: 0.25s; -moz-transition: 0.25s; -o-transition: 0.25s; transition: 0.25s;}
+.form-login-remember {color: #ccd0d2; font-size: 11px; margin: 5px -10px 0px 20px; width: 178px;}
+.form-login-remember a{color: #ccd0d2; margin-left: 10px;}
+.form-login-remember a:hover {color: #34c0a3;}
+#ajax-login-result{width: 170px; float:left; position: absolute; margin-left: -20px; color:red;}
+#ajax-modal-result{padding: 10px 0 0 0; color:red;}
+/* конец форма логина */
+
+/* начало регистрация */
+#registration{cursor: pointer;}
+.logo-games img{margin-top: -20px; width: 95%}
+.welcome-txt{width: 380px; line-height: 1.1em; position: relative; right: 15px;}
+.welcome-txt span{font-size: 12px;}
+.form-reg-input{height: 20px; font-size: 12px !important; width: 220px; margin:5px 0;}
+.top-reg-input{margin-top: 25px;}
+.bottom-reg-input{margin-bottom: 35px;}
+.btn-reg{background: #1abc9c; color: #ffffff; padding: 10px 40px; text-decoration: none; border-radius: 5px; -webkit-transition: 0.25s; -moz-transition: 0.25s; -o-transition: 0.25s; transition: 0.25s;}
+.btn-reg:hover {background: #2fe2bf; color: #ffffff; text-decoration: none; border-radius: 5px; -webkit-transition: 0.25s; -moz-transition: 0.25s; -o-transition: 0.25s; transition: 0.25s;}
+.btn-reg-txt{line-height: 0.7em; float: right; width: 199px; position: relative; bottom: 9px;}
+.btn-reg-txt span{font-size: 10px;}
+.login-input-big{background-image: url("/skins/img/interface/login-reg-disabled.png"); background-repeat: no-repeat; background-position: right 9px bottom 10px; -webkit-transition: 0.25s; -moz-transition: 0.25s; -o-transition: 0.25s; transition: 0.25s;}
+.login-input-big:focus{background-image: url("/skins/img/interface/login-reg-enabled.png"); background-repeat: no-repeat; background-position: right 9px bottom 10px; -webkit-transition: 0.25s; -moz-transition: 0.25s; -o-transition: 0.25s; transition: 0.25s;}
+#pass-reg{background-image: url("/skins/img/interface/pass-reg-disabled.png"); background-repeat: no-repeat; background-position: right 9px bottom 10px; -webkit-transition: 0.25s; -moz-transition: 0.25s; -o-transition: 0.25s; transition: 0.25s;}
+#pass-reg:focus{background-image: url("/skins/img/interface/pass-reg-enabled.png"); background-repeat: no-repeat; background-position: right 9px bottom 10px; -webkit-transition: 0.25s; -moz-transition: 0.25s; -o-transition: 0.25s; transition: 0.25s;}
+#pass-reg-confirm{background-image: url("/skins/img/interface/pass-reg-disabled.png"); background-repeat: no-repeat; background-position: right 9px bottom 10px; -webkit-transition: 0.25s; -moz-transition: 0.25s; -o-transition: 0.25s; transition: 0.25s;}
+#pass-reg-confirm:focus{background-image: url("/skins/img/interface/pass-reg-enabled.png"); background-repeat: no-repeat; background-position: right 9px bottom 10px; -webkit-transition: 0.25s; -moz-transition: 0.25s; -o-transition: 0.25s; transition: 0.25s;}
+/* конец регистрация */
+
+/* начало хинты */
+.tip-black {opacity:0.8; z-index:1000; text-align:left; border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px; padding:8px 8px; max-width:216px; color:#fff; background-color:#000;}
+.tip-black .tip-inner {font-size: 11px; font-weight: bold; }
+.tip-black .tip-arrow-top {margin-top:-5px; margin-left:-5px; top:0; left:50%; width:9px; height:5px; background:url(/skins/img/interface/hint.gif) no-repeat;}
+.tip-black .tip-arrow-right {margin-top:-4px; margin-left:0; top:50%; left:100%; width:5px; height:9px; background:url(/skins/img/interface/hint.gif) no-repeat -9px 0;}
+.tip-black .tip-arrow-bottom {margin-top:0; margin-left:-5px; top:100%; left:50%; width:9px; height:5px; background:url(/skins/img/interface/hint.gif) no-repeat -18px 0;}
+.tip-black .tip-arrow-left {margin-top:-4px; margin-left:-5px; top:50%; left:0; width:5px;	height:9px;	background:url(/skins/img/interface/hint.gif) no-repeat -27px 0;}
+/* конец хинты */
+/* ---------------------- Начало модальные окна --------------------------- */
+.box-modal {position: relative; width: 500px;background: #fff; z-index: 9999 !important; padding: 0px !important; color: #3c3c3c; font: 14px/18px; border-radius: 4px;}
+.header-modal{width: 100%;background: #2c3e50; height: 33px; border-top-left-radius:4px; border-top-right-radius:4px;}
+.header-modal b{color: white; position: relative;left: 16px;top: 6px;}
+.header-modal img{position: relative;top: 3px;}
+.box-modal_close { position: absolute; right: 10px; top: 6px; font-size: 11px; line-height: 15px; color: #999; cursor: pointer; }
+.box-modal_close:hover { color: #666; }
+.arcticmodal-overlay,
+.arcticmodal-container { position: fixed; left: 0; top: 0; right: 0; bottom: 0; z-index: 9999; }
+.arcticmodal-container { margin: 0; padding: 0; border: 0; border-collapse: collapse; }
+*:first-child+html .arcticmodal-container { height: 100% }
+.arcticmodal-container_i { height: 100%; margin: 0 auto; }
+.arcticmodal-container_i2 { padding: 24px; margin: 0; border: 0; vertical-align: middle; }
+.arcticmodal-error { padding: 20px; border-radius: 10px; background: #000; color: #fff; }
+.arcticmodal-loading { width: 80px; height: 80px; border-radius: 10px; background: #000 url(/skins/img/ajax-loader-modal.gif) no-repeat 50% 50%; }
+
+/* ---------------------- Конец модальные окна --------------------------- */
+
+
+/* ---------------------- Начало кнопка загрузки файла --------------------------- */
+.progress_container {padding: 1px; width: 126px; height: 9px; overflow: hidden; background: url(/skins/img/progress_container.png);}
+.progress_bar {height: 9px; width: 0px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; background: url(/skins/img/progress_bar.png);}
+#preloader {visibility: hidden;}
+.container {width:100px; height:30px;}
+.upload {position:relative;}
+.upload > input[type=file] {display:block; width:100%; height:100%; opacity:0;}
+.upload > .btn {position:absolute; top:0; left:0; width:100%; height:100%; background:#efefef; color:#555; border:solid 1px #ddd;
+    border-radius:4px; text-align:center; font-size:13px; line-height: 30px; z-index:0;}
+.upload:hover > .btn {background:#f7f7f7; color:#333;}
+.upload:active > .btn {background:#efefef; color:#333; margin-top:1px;}
+.active a.menu-link {color:#1abc9c !important;}
+/* ---------------------- Конец кнопка загрузки файла --------------------------- */
+
+
+/* ---------------------- Начало пользовательские элементы (радиокнопки и чекбоксы) --------------------------- */
+.checkbox, .radio {margin-bottom: 12px; padding-left: 5px; position: relative; -webkit-transition: 0.25s; -moz-transition: 0.25s; -o-transition: 0.25s; transition: 0.25s; -webkit-backface-visibility: hidden; }
+.checkbox:hover, .radio:hover {color: #1abc9c; }
+.checkbox input, .radio input {outline: none !important; opacity: 0; filter: alpha(opacity=0); zoom: 1; }
+.checkbox.checked .icon, .radio.checked .icon {background-position: -60px -30px; opacity: 1; display: block\9; }
+.checkbox.checked .icon-to-fade, .radio.checked .icon-to-fade {opacity: 0; display: none\9; }
+.checkbox.disabled, .radio.disabled {color: #d7dddd; cursor: default; }
+.checkbox.disabled .icon, .radio.disabled .icon {opacity: 0; display: none\9; }
+.checkbox.disabled .icon-to-fade, .radio.disabled .icon-to-fade {background-position: -30px -60px; opacity: 1; display: block\9; }
+.checkbox.disabled.checked .icon, .radio.disabled.checked .icon {background-position: 0 -90px; opacity: 1; display: block\9; }
+.checkbox.disabled.checked .icon-to-fade, .radio.disabled.checked .icon-to-fade {opacity: 0; display: none\9;}
+.checkbox .icon, .checkbox .icon-to-fade, .radio .icon, .radio .icon-to-fade {background: url("/skins/img/interface/checkbox.png") -90px 0 no-repeat; display: block; height: 20px; left: 0; opacity: 1; position: absolute; top: -1px; width: 20px; -webkit-transition: opacity 0.1s linear; -moz-transition: opacity 0.1s linear; -o-transition: opacity 0.1s linear; transition: opacity 0.1s linear; -webkit-backface-visibility: hidden; }
+.checkbox .icon, .radio .icon {opacity: 0; top: 0; z-index: 2; display: none\9; }
+.radio .icon, .radio .icon-to-fade {background-image: url("/skins/img/interface/radio.png"); }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 2)
+{
+    .checkbox .icon {background-image: url("/skins/img/interface/checkbox-2x.png"); background-size: 110px 110px; }
+    .radio .icon {background-image: url("/skins/img/interface/radio-2x.png"); background-size: 110px 110px; }
+}
+/* ---------------------- Конец пользовательские элементы (радиокнопки и чекбоксы) --------------------------- */
+
+
+/* ---------------------- Начало оформеление страницы участие в турнирах --------------------------- */
+.table-tournament-header{background-color: #002db2; height: 25px; color: white; font-size: 14px;}
+#table-tournament{width: 930px; text-align: center;}
+#table-tournament th{background-color: #364b5f; height:25px; color: white; font-size: 14px}
+#table-tournament td{border: 1px solid #eeeeee; padding: 5px}
+#chat_body{width:400px; margin:8px auto 3px; float:left; word-wrap: break-word; background-color: #34495e; border-radius: 10px;}
+#chat_text_input{float:left; width:368px; margin:0px 10px 10px 10px; font-size:13px; border:1px solid #999; -webkit-border-radius: 5px; -moz-border-radius:5px; border-radius:5px;}
+#chat_button{float:left; margin:2px 5px 2px 15px;}
+#logout_button{float:left; margin:2px 5px;}
+.chat_mess_time {font:10px Verdana, Geneva, sans-serif !important; margin:1px 3px; float:right;}
+.chat_nickname {font-weight:bold;}
+.avatar-chat{width: 50px; border-radius: 30px; float: left}
+.chat_post_other {font:11px Verdana, Geneva, sans-serif !important; margin:1px 3px; color:#039;}
+.mess_text_area{font-size: 11px; padding: 10px 3px 10px 3px; background-color: #fff; width: 292px; margin-left: 61px; border-radius: 4px; margin-top: 15px;}
+.mess_text_area img{position: relative; right: 9px;}
+.mess_text_area_opponent{font-size: 11px; padding: 10px 3px 10px 3px; background-color: #fff; width: 292px; float:left; border-radius: 4px; margin-top: 15px;}
+.mess_text_area_opponent img{position: relative; left: 9px; float: right;}
+.avatar-chat-opponent{width: 50px; border-radius: 30px; float: right; position: relative; top: 10px;}
+.parsed_url { color:#06C !important; text-decoration:none;}
+.parsed_url:hover { color:#06C; text-decoration: underline;}
+.header-chat{padding: 10px;}
+.header-chat-left{padding-right: 70px; margin-top: 5px; float: left}
+.header-chat-left img{padding-right: 10px;}
+.header-chat-middle img{width: 50px; border-radius: 30px;}
+.header-chat-middle span{padding: 10px; color: white; position: relative; bottom: 18px;}
+.header-chat-right{margin-top: 5px; float: right}
+#scrollbar1 { width: 367px; clear: both; border: 1px solid #6a7887;
+    -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; margin: 0 0 10px 10px; padding: 5px 5px;}
+#scrollbar1 .viewport { width: 361px; height: 300px; overflow: hidden; position: relative; }
+#scrollbar1 .overview { list-style: none; position: absolute; left: 0; top: 0; }
+#scrollbar1 .thumb .end,#scrollbar1 .thumb { background-color: #fff; }
+#scrollbar1 .scrollbar { position: relative; float: right; width: 4px; }
+#scrollbar1 .track { background-color: #6a7887; height: 100%; width: 5px; position: relative; padding: 0 1px; border-radius: 10px; }
+#scrollbar1 .thumb {height: 20px; width: 5px; cursor: pointer; overflow: hidden; position: absolute; background: #fff; top: 0; border-radius: 10px; }
+#scrollbar1 .thumb .end { overflow: hidden; height: 5px; width: 5px; }
+#scrollbar1 .disable{ display: none; }
+.noSelect { user-select: none; -o-user-select: none; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; }
+
+/* ---------------------- Конец оформеление страницы участие в турнирах --------------------------- */
+
+
+/* ---------------------- Начало оформеление рейтинга при добавлении игры в базе пользователя --------------------------- */
+div.vote-wrap{overflow: hidden; margin-bottom: 20px;}
+div.vote-block{position: relative;}
+div.vote-hover{float: left; cursor:  pointer;}
+div.vote-stars{position: absolute; left: 0;	top: 0;}
+div.vote-active{position: absolute;	left: 0; top: 0;}
+div.vote-result{color: #ccc; font-size: 14px; margin-top: 12px; padding-left: 190px;}
+div.vote-success{position: absolute; top: 350px; clear: both; color: #ccc; font-size: 14px; margin: 10px 0 0 10px;}
+img {margin:0; padding:0; border:0;}
+div.top_menu{top:0; left: 110; right: 0; height: 40px; background: #000;}
+div.top_menu  div.home{margin: 9px 25px;}
+div.top_menu  a{color: #fff; text-decoration: none;}
+div.top_menu a:hover{text-decoration: underline;}
+div.top_menu div.title{margin: 0 25px; float: right;}
+div.top_menu div.title h1{font-size: 100%; font-weight: normal;}
+div.wrap{margin: 180px auto; width: 300px;}
+div.border-wrap{background-clip: border-box; background-color: rgb(255, 255, 255); background-origin: padding-box; background-size: auto; border: 1px solid rgb(192, 192, 192); border-bottom-left-radius: 9px; border-bottom-right-radius: 9px; border-top-left-radius: 9px; border-top-right-radius: 9px; margin: 10px auto; overflow: hidden; padding: 10px; position: relative;}
+div.border-wrap h1{text-align: center; font-size: 24px;}
+div.border-wrap h2{font-size: 20px;}
+/* ---------------------- Конец оформеление рейтинга при добавлении игры в базе пользователя --------------------------- */
