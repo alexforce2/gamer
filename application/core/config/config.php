@@ -36,5 +36,6 @@ class Config
 
     public function GlobalVar()
     {
+        //
     }
 }
